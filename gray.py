@@ -1,3 +1,6 @@
+#code by tvilas at hushmail dot com
+# https://github.com/tiagohide/FGV/
+#generate gray code (there is a bug)
 def gen (n):
     if n == 0:
         return ['']
