@@ -1,3 +1,8 @@
+/*
+Generate gray code
+code by tvilas at hushmail dot com
+https://github.com/tiagohide/FGV
+*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
