@@ -1,12 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
-int main(void)
+int main(int argc, char **argv) 
 {
-    char s[256];
+    char *s = NULL;
     int b, i, j, m, g;
 
-    gets(s);
+    s = calloc(1, 256);
+
+    printf("Enter number then press <ENTER>: ");
+    fgets(s, 255, stdin);
+
+    if(strlen(s) > 5)
+    {
+        printf("Invalid input\n");
+        if(s)
+            free(s);
+        exit(0);
+    }
+
     b = atoi(s);
 
     for (i = 0; i < 1 << b; ++i)
@@ -19,9 +32,11 @@ int main(void)
             s[j] = (g & m) ? '1' : '0';
             m >>= 1;
         }
+
         s[j] = '\0';
+
         puts(s);
     }
-    return 0;
-}
 
+    free(s);
+    return 0;
