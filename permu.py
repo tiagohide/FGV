@@ -1,5 +1,6 @@
-#Curso de Verao Fundamentos de Matematica
-#Lista recursiva 
+#recursive list
+#code by tvilas at hushmail dot com
+# https://github.com/tiagohide/FGV/
 
 
 def permuta(y):
