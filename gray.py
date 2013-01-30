@@ -5,8 +5,10 @@ def gen (n):
         z = '0'+x
     for y in gen(n-1): 
         u = '1'+y
-    return [u+z] 
+    n = [u[0][::1]] 
+    print n
+    return [z+u] 
 
 inp = int(raw_input("Gera codigo de gray de tamanho: "))
 print gen(inp)
-
+#print [gen(inp)[0][::-1]]
