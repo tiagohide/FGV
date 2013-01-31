@@ -14,12 +14,12 @@ int main(int argc, char **argv)
 
     s = calloc(1, 256);
 
-    printf("Enter number then press <ENTER>: ");
+    printf("Entre com o tamanho: ");
     fgets(s, 255, stdin);
 
     if(strlen(s) > 5)
     {
-        printf("Invalid input\n");
+        printf("entrada invalida\n");
         if(s)
             free(s);
         exit(0);
